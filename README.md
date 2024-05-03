@@ -6,13 +6,21 @@
 
 Поддерживает:
 Dmail
+
 Izumi
+
 Nitro Bridge
+
 Orbiter Bridge
+
 Scroll Domains
+
 SpaceFi
+
 SyncSwap
+
 Nfts2me
+
 и др.
 
 - Прогрев кошелька
