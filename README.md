@@ -1,4 +1,23 @@
-# Scroll aio
+![image](https://github.com/privatekey7/Scroll-Machine/assets/36263200/4903dc18-96a5-43f1-a9a8-e7580a6113d2)
+
+# Scroll Machine
+
+Универсальный софт для прокрутки Scroll
+Поддерживает:
+Dmail
+Izumi
+Nitro Bridge
+Orbiter Bridge
+Scroll Domains
+SpaceFi
+SyncSwap
+Nfts2me
+и др.
+
+- Прогрев кошелька
+- Бридж в/из Scroll
+- Набив объёмов
+- Сборщик токенов
 
 #### Установка зависимостей для Windows:
 
