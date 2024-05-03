@@ -8,7 +8,7 @@
 
 Dmail
 
-Izumi
+Izumi finance
 
 Nitro Bridge
 
