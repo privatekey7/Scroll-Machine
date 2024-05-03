@@ -1,0 +1,181 @@
+from utils import read_from_json
+
+# CLIENT CONFIGURATION
+VERIFY_TX_TIMEOUT = 300
+
+GAS_LIMIT_MULTIPLIER = 1.5
+GAS_PRICE_MULTIPLIER = 1.05
+
+MAX_ALLOWED_TOKEN_PRICE_DIFFERENCE = 5
+
+RETRIES = 10
+RETRY_DELAY_RANGE = [5, 10]
+
+TOKEN_FULL_BALANCE_USAGE_MULTIPLIER = 0.99999999999999
+
+ORBITER_TX_SIMULATION_VALUE = 500000000000000
+SCROLL_BRIDGE_TX_SIMULATION_VALUE = 500000000000000
+ROUTER_TX_SIMULATION_VALUE = 100000000000000
+TRANSFER_TX_SIMULATION_VALUE = 10000000000000
+
+POST_BRIDGE_CHECK_WAIT_RANGE = [2, 5]
+
+ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
+NATIVE_TOKEN_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+
+ACTION_TO_DAPP = {
+    "swap": ["izumi", "skydrome", "spacefi", "syncswap", "zebra"],
+    "lending": ["layerbank"],
+    "dmail": ["dmail"],
+    "nft": ["nft"],
+    "domain": ["domain"],
+    "rubyscore": ["rubyscore"],
+}
+
+VOLUME_MODE_STATE_NAME = "volume_mode_state"
+COG_VOLUME_STATE_NAME = "cog_volume_state"
+
+# ROUTER NITRO
+ROUTER_PATHFINDER_QUOTE_FETCH_URL = (
+    "https://api-beta.pathfinder.routerprotocol.com/api/v2/quote"
+    "?fromTokenAddress={from_token}"
+    "&toTokenAddress={to_token}"
+    "&amount={amount}"
+    "&fromTokenChainId={from_chain_id}"
+    "&toTokenChainId={to_chain_id}"
+    "&partnerId=1"
+)
+
+ROUTER_PATHFINDER_TX_FETCH_URL = "https://api-beta.pathfinder.routerprotocol.com/api/v2/transaction"
+
+"""
+DEXES CONTRACT ADDRESSES / ABIS
+"""
+
+# RUBYSCORE
+RUBYSCORE_CONTRACT_ADDRESS = "0xe10Add2ad591A7AC3CA46788a06290De017b9fB4"
+
+
+# ZEBRA
+ZEBRA_ROUTER_CONTRACT_ADDRESS = "0x0122960d6e391478bfE8fB2408Ba412D5600f621"
+ZEBRA_ROUTER_CONTRACT_ABI = read_from_json(file_path="core/abi/ZebraRouterABI.json")
+
+# SYNCSWAP
+SYNCSWAP_ROUTER_CONTRACT_ADDRESS = "0x80e38291e06339d10AAB483C65695D004dBD5C69"
+SYNCSWAP_ROUTER_CONTRACT_ABI = read_from_json(file_path="core/abi/SyncSwapRouterABI.json")
+SYNCSWAP_CLASSIC_POOL_FACTORY_ADDRESS = "0x37BAc764494c8db4e54BDE72f6965beA9fa0AC2d"
+SYNCSWAP_CLASSIC_POOL_FACTORY_ABI = read_from_json(file_path="core/abi/SyncSwapClassicPoolFactoryABI.json")
+SYNCSWAP_STABLE_POOL_FACTORY_ADDRESS = "0xE4CF807E351b56720B17A59094179e7Ed9dD3727"
+SYNCSWAP_STABLE_POOL_FACTORY_ABI = read_from_json(file_path="core/abi/SyncSwapStablePoolFactoryABI.json")
+SYNCSWAP_POOL_ABI = read_from_json(file_path="core/abi/SyncSwapPoolABI.json")
+
+# IZUMI
+IZUMI_ROUTER_CONTRACT_ADDRESS = "0x2db0AFD0045F3518c77eC6591a542e326Befd3D7"
+IZUMI_QUOTER_CONTRACT_ADDRESS = "0x3EF68D3f7664b2805D4E88381b64868a56f88bC4"
+IZUMI_QUOTER_CONTRACT_ABI = read_from_json(file_path="core/abi/IzumiQuoterABI.json")
+IZUMI_ROUTER_CONTRACT_ABI = read_from_json(file_path="core/abi/IzumiRouterABI.json")
+
+# SKYDROME
+SKYDROME_ROUTER_CONTRACT_ADDRESS = "0xAA111C62cDEEf205f70E6722D1E22274274ec12F"
+SKYDROME_ROUTER_CONTRACT_ABI = read_from_json(file_path="core/abi/SkydromeRouterABI.json")
+
+# SPACEFI
+SPACEFI_ROUTER_CONTRACT_ADDRESS = "0x18b71386418A9FCa5Ae7165E31c385a5130011b6"
+SPACEFI_ROUTER_CONTRACT_ABI = read_from_json(file_path="core/abi/SpacefiRouterABI.json")
+
+# LAYERBANK
+LAYERBANK_CONTRACT_ADDRESS = "0xEC53c830f4444a8A56455c6836b5D2aA794289Aa"
+LAYERBANK_CONTRACT_ABI = read_from_json(file_path="core/abi/LayerbankABI.json")
+
+# DMAIL
+DMAIL_CONTRACT_ADDRESS = "0x47fbe95e981C0Df9737B6971B451fB15fdC989d9"
+DMAIL_CONTRACT_ABI = read_from_json(file_path="core/abi/DmailABI.json")
+
+# SCROLL BRIDGE
+SCROLL_BRIDGE_CONTRACT_ADDRESS = "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367"
+SCROLL_BRIDGE_CONTRACT_ABI = read_from_json(file_path="core/abi/ScrollMessengerABI.json")
+SCROLL_BRIDGE_RECEIVE_GAS_LIMIT = 168000
+SCROLL_GAS_PRICE_MULTIPLIER = 1.2
+SCROLL_MESSAGE = "0x"
+SCROLL_BRIDGE_FULL_BRIDGE_GAS_MULTIPLIER = 1.1
+
+# COG FINANCE
+COG_FINANCE_USDC_WETH_POOL_CONTRACT_ADDRESS = "0xb31d07F716b5cd5C47e5d46E6955D7185F04Fd24"
+COG_FINANCE_USDC_WETH_POOL_CONTRACT_ABI = read_from_json(file_path="core/abi/CogFinanceUsdcWethPoolABI.json")
+
+# ROUTER NITRO
+CHAIN_TO_NITRO_ASSET_FORWARDER_CONTRACT_ADDRESS = {
+    "ARBITRUM": "0xEF300Fb4243a0Ff3b90C8cCfa1264D78182AdaA4",
+    "ZKSYNC": "0x8B6f1C18c866f37e6EA98AA539e0C117E70178a2",
+    "SCROLL": "0x01B4CE0d48Ce91eB6bcaf5dB33870C65d641b894",
+    "LINEA": "0x8C4aCd74Ff4385f3B7911432FA6787Aa14406f8B",
+}
+NITRO_ASSET_FORWARDER_CONTRACT_ABI = read_from_json(file_path="core/abi/NitroAssetForwarderABI.json")
+
+NITRO_PARTNER_ID = 1
+
+# TOKENS
+WETH_CONTRACT_ADDRESS = "0x5300000000000000000000000000000000000004"
+WETH_CONTRACT_ABI = read_from_json(file_path="core/abi/wethABI.json")
+
+USDC_CONTRACT_ADDRESS = "0x06eFdBFf2a14a7c8E15944D1F4A48F9F95F663A4"
+USDT_CONTRACT_ADDRESS = "0xf55BEC9cafDbE8730f096Aa55dad6D22d44099Df"
+
+# LAYERBANK TOKEN
+LETH_CONTRACT_ADDRESS = "0x274C3795dadfEbf562932992bF241ae087e0a98C"
+
+# ORBITER
+ORBITER_TRADING_FEES_DATA = read_from_json(file_path="core/abi/OrbiterFeesData.json")
+ORBITER_CHAIN_CODE_BASE = 9000
+GAS_ESTIMATE_MULTIPLIER = 1.4
+SCROLL_GAS_ESTIMATE_MULTIPLIER = 6
+ESTIMATE_FULL_BRIDGE_ROUND = 7
+
+ORBITER_CONTRACT_ADDRESSES = {
+    "ARBITRUM": "0x80C67432656d59144cEFf962E8fAF8926599bCF8",
+    "SCROLL": "0x80C67432656d59144cEFf962E8fAF8926599bCF8",
+    "LINEA": "0x80C67432656d59144cEFf962E8fAF8926599bCF8",
+    "ZKSYNC": "0x80C67432656d59144cEFf962E8fAF8926599bCF8",
+}
+
+# SNS
+SCROLL_DOMAINS_CONTRACT_ADDRESS = "0xe2e1D82b050Bb5BFeC776b2653A72f093A8373AB"
+SCROLL_DOMAINS_CONTRACT_ABI = read_from_json(file_path="core/abi/ScrollDomainsABI.json")
+SCROLL_DOMAIN_PRICE = 2500000000000000
+
+# multicall
+MULTICALL_V3_CONTRACT_ADDRESS = "0xcA11bde05977b3631167028862bE2a173976CA11"
+MULTICALL_V3_CONTRACT_ABI = read_from_json(file_path="core/abi/MulticallV3ABI.json")
+
+# ERC20 TOKENS ABI
+ERC20_CONTRACT_ABI = read_from_json(file_path="core/abi/erc20ABI.json")
+
+
+# regex for matching the valid proxy format
+PROXY_PATTERN = r"^([^:@\s]+):([^:@\s]+)@([a-zA-Z0-9.-]+|\d+\.\d+\.\d+\.\d+):(\d+)$"
+
+# api endpoint for fetching current token USD price
+TOKEN_PRICE_FETCH_URL = "https://api.coinlore.net/api/ticker/?id={}"
+
+# api endpoint for getting random user data
+RANDOM_USER_FETCH_URL = "https://api.namefake.com/"
+
+# database/pks/proxies files paths
+PRIVATE_KEYS_FILE_PATH = "data/private_keys.txt"
+PROXIES_FILE_PATH = "data/proxies.txt"
+DEPOSIT_ADDRESSES_PATH = "data/deposit_addresses.txt"
+DATABASE_FILE_PATH = "data/database.json"
+
+"""
+NFT
+"""
+SCROLL_NFT_ABI = read_from_json(file_path="core/abi/N2merc721ABI.json")
+
+
+"""
+OKX
+"""
+OKX_WITHDRAW_TRIES = 5
+OKX_WITHDRAW_DELAY_RANGE = [60, 60]
+OKX_WAIT_FOR_WITHDRAWAL_FINAL_STATUS_DELAY_RANGE = [10, 10]
+OKX_WAIT_FOR_WITHDRAWAL_FINAL_STATUS_ATTEMPTS = 100
