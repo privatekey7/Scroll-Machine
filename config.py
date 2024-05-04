@@ -77,15 +77,15 @@ RUBYSCORE_TX_COUNT = [1, 1]
 
 # Настройка количества минтов NFT
 SCROLL_NFTS_TO_MINT = {
-    "0xA17D12bdA7B910281E2D1f52c6FD3002a0DBF8EF": {"mint_fee": 0.0006, "amount": [0, 1]},  # LYRA
-    "0x08d544c99c92E4Ad3fCEa33148da223b15BABB51": {"mint_fee": 0.0006, "amount": [0, 1]},  # Secret Scroll
-    "0x049FCf09b857DC2CE5AaCBa3543256e1B31399C1": {"mint_fee": 0.0006, "amount": [0, 1]},  # Scroll of History
-    "0x09ad16d391b08b529Ebe07e67098745248E00BD8": {"mint_fee": 0.0006, "amount": [0, 1]},  # Mystycal Scroll NFT
-    "0xE0455ACFfb322f4eCEA6B8e86C558A398Abc7C6d": {"mint_fee": 0.0006, "amount": [0, 1]},  # Dragon Scroll
-    "0xBe08E34B25276B42A802e795759e094C96f9BbFe": {"mint_fee": 0.0006, "amount": [0, 1]},  # Key of Scroll
-    "0xa715d214Fe2BA8E9eCaF35B61B42E07fB9AE6d8F": {"mint_fee": 0.0006, "amount": [0, 1]},  # Batman Scroll
-    "0xa4E928b809807b73CC63F57b98D972D11913532e": {"mint_fee": 0.0006, "amount": [0, 1]},  # Celestial Scrolls
-    "0xbBd3595240C8218328b52890ed9406EC0a941B00": {"mint_fee": 0.0006, "amount": [0, 1]},  # Scroll Early Adopter
+    "0xA17D12bdA7B910281E2D1f52c6FD3002a0DBF8EF": {"mint_fee": 0.0004, "amount": [0, 1]},  # LYRA
+    "0x08d544c99c92E4Ad3fCEa33148da223b15BABB51": {"mint_fee": 0.0004, "amount": [0, 1]},  # Secret Scroll
+    "0x049FCf09b857DC2CE5AaCBa3543256e1B31399C1": {"mint_fee": 0.0004, "amount": [0, 1]},  # Scroll of History
+    "0x09ad16d391b08b529Ebe07e67098745248E00BD8": {"mint_fee": 0.0004, "amount": [0, 1]},  # Mystycal Scroll NFT
+    "0xE0455ACFfb322f4eCEA6B8e86C558A398Abc7C6d": {"mint_fee": 0.0004, "amount": [0, 1]},  # Dragon Scroll
+    "0xBe08E34B25276B42A802e795759e094C96f9BbFe": {"mint_fee": 0.0004, "amount": [0, 1]},  # Key of Scroll
+    "0xa715d214Fe2BA8E9eCaF35B61B42E07fB9AE6d8F": {"mint_fee": 0.0004, "amount": [0, 1]},  # Batman Scroll
+    "0xa4E928b809807b73CC63F57b98D972D11913532e": {"mint_fee": 0.0004, "amount": [0, 1]},  # Celestial Scrolls
+    "0xbBd3595240C8218328b52890ed9406EC0a941B00": {"mint_fee": 0.0004, "amount": [0, 1]},  # Scroll Early Adopter
 }
 
 # Максимальное количество одной NFT, которое может быть на кошельке
